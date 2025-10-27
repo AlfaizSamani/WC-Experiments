@@ -4,13 +4,98 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Online Book Store</title>
-  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f7f9fb, #dbe2ef);
+      color: #222;
+    }
+    .navbar {
+      background-color: #283593 !important;
+    }
+    .navbar-brand {
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .hero-section {
+      background: linear-gradient(135deg, #1e88e5, #3949ab);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .hero-section h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+    }
+    .hero-section p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+    .hero-section .btn {
+      background-color: #fdd835;
+      border: none;
+      color: #283593;
+      font-weight: 600;
+      margin-top: 20px;
+    }
+    .hero-section .btn:hover {
+      background-color: #fff176;
+    }
+    .search-bar {
+      background-color: #fff;
+      border-radius: 50px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 8px 20px;
+      max-width: 600px;
+      margin: 40px auto;
+    }
+    .search-bar input {
+      border: none;
+      outline: none;
+      width: 85%;
+    }
+    .search-bar button {
+      background-color: #283593;
+      color: white;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 50px;
+    }
+    .card {
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+    }
+    .card-title {
+      color: #283593;
+      font-weight: 600;
+    }
+    .card-body .btn {
+      background-color: #283593;
+      border: none;
+      font-weight: 500;
+    }
+    .card-body .btn:hover {
+      background-color: #1a237e;
+    }
+    footer {
+      background-color: #283593;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 50px;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
       <a class="navbar-brand" href="#">BookStore 📚</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -26,91 +111,79 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="bg-light text-center p-5">
+  <section class="hero-section">
     <div class="container">
       <h1>Welcome to Our Online Book Store!</h1>
-      <p class="lead">Find your favorite books and explore new ones.</p>
-      <a href="#" class="btn btn-primary btn-lg">Shop Now</a>
+      <p>Discover your next great read from thousands of amazing books.</p>
+      <a href="#" class="btn btn-lg">Shop Now</a>
     </div>
   </section>
 
-  <!-- Search Bar -->
-  <section class="py-4">
+  <section>
+    <div class="search-bar d-flex align-items-center justify-content-between">
+      <input type="text" placeholder="Search for books...">
+      <button type="button">Search</button>
+    </div>
+  </section>
+
+  <section class="py-5">
     <div class="container">
-      <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Search for books...">
-        <button class="btn btn-primary" type="button">Search</button>
+      <h2 class="mb-4 text-center text-primary">Available Books</h2>
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div class="card h-100">
+            <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?fit=crop&w=200&h=300" class="card-img-top" alt="Book 1">
+            <div class="card-body">
+              <h5 class="card-title">The Seeking Library</h5>
+              <p class="card-text">Author: James Dean</p>
+              <p class="card-text fw-bold">$10.99</p>
+              <a href="#" class="btn w-100">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card h-100">
+            <img src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?fit=crop&w=200&h=300" class="card-img-top" alt="Book 2">
+            <div class="card-body">
+              <h5 class="card-title">Nowhere</h5>
+              <p class="card-text">Author: Jane Smith</p>
+              <p class="card-text fw-bold">$12.50</p>
+              <a href="#" class="btn w-100">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card h-100">
+            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?fit=crop&w=200&h=300" class="card-img-top" alt="Book 3">
+            <div class="card-body">
+              <h5 class="card-title">The Idea Where to Start With</h5>
+              <p class="card-text">Author: Alice Johnson</p>
+              <p class="card-text fw-bold">$15.00</p>
+              <a href="#" class="btn w-100">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card h-100">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.TYtiazLfVQ36w5tsCT43RwHaLO?pid=Api&P=0&h=180" class="card-img-top" alt="Book 4">
+            <div class="card-body">
+              <h5 class="card-title">Alchemist</h5>
+              <p class="card-text">Author: Bob Lee</p>
+              <p class="card-text fw-bold">$9.99</p>
+              <a href="#" class="btn w-100">Buy Now</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
- <!-- Book Section -->
-<section class="py-5">
-  <div class="container">
-    <h2 class="mb-4">Available Books</h2>
-    <div class="row g-4">
-      <!-- Book Card 1 -->
-      <div class="col-md-3">
-        <div class="card h-100">
-          <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?fit=crop&w=200&h=300" class="card-img-top" alt="Book 1">
-          <div class="card-body">
-            <h5 class="card-title">The seeking Library</h5>
-            <p class="card-text">Author: James Dean</p>
-            <p class="card-text">$10.99</p>
-            <a href="#" class="btn btn-primary w-100">Buy Now</a>
-          </div>
-        </div>
-      </div>
-      <!-- Book Card 2 -->
-      <div class="col-md-3">
-        <div class="card h-100">
-          <img src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?fit=crop&w=200&h=300" class="card-img-top" alt="Book 2">
-          <div class="card-body">
-            <h5 class="card-title">Nowhere</h5>
-            <p class="card-text">Author: Jane Smith</p>
-            <p class="card-text">$12.50</p>
-            <a href="#" class="btn btn-primary w-100">Buy Now</a>
-          </div>
-        </div>
-      </div>
-      <!-- Book Card 3 -->
-      <div class="col-md-3">
-        <div class="card h-100">
-          <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?fit=crop&w=200&h=300" class="card-img-top" alt="Book 3">
-          <div class="card-body">
-            <h5 class="card-title">The idea where to start with</h5>
-            <p class="card-text">Author: Alice Johnson</p>
-            <p class="card-text">$15.00</p>
-            <a href="#" class="btn btn-primary w-100">Buy Now</a>
-          </div>
-        </div>
-      </div>
-      <!-- Book Card 4 -->
-      <div class="col-md-3">
-        <div class="card h-100">
-          <img src="https://tse2.mm.bing.net/th/id/OIP.TYtiazLfVQ36w5tsCT43RwHaLO?pid=Api&P=0&h=180" class="card-img-top" alt="Book 4">
-          <div class="card-body">
-            <h5 class="card-title">Alchemist</h5>
-            <p class="card-text">Author: Bob Lee</p>
-            <p class="card-text">$9.99</p>
-            <a href="#" class="btn btn-primary w-100">Buy Now</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <!-- Footer -->
-  <footer class="bg-primary text-white text-center py-3">
-    <div class="container">
-      <p>&copy; 2025 Online Book Store. All rights reserved.</p>
-      <p>Contact: info@bookstore.com</p>
-    </div>
+  <footer>
+    <p>&copy; 2025 Online Book Store. All rights reserved.</p>
+    <p>Contact: info@bookstore.com</p>
   </footer>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
